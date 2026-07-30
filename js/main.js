@@ -100,5 +100,5 @@ chatForm.addEventListener('submit', (event) => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  toggleChat(true);
+  toggleChat(false);
 });
