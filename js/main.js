@@ -12,6 +12,15 @@ function addMessage(text, sender) {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
+function showTypingIndicator() {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'chat-bubble bot typing';
+  wrapper.innerHTML = '<span></span><span></span><span></span>';
+  chatMessages.appendChild(wrapper);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return wrapper;
+}
+
 function getResponse(message) {
   const query = message.toLowerCase();
 
@@ -82,7 +91,14 @@ chatForm.addEventListener('submit', (event) => {
   addMessage(value, 'user');
   chatInput.value = '';
 
+  const typingIndicator = showTypingIndicator();
+
   window.setTimeout(() => {
+    typingIndicator.remove();
     addMessage(getResponse(value), 'bot');
-  }, 220);
+  }, 650);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  toggleChat(true);
 });
