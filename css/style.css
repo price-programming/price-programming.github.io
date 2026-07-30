@@ -156,6 +156,25 @@ nav a:hover {
   padding: 1.25rem 1.5rem;
 }
 
+.resume-role-card {
+  padding-top: 1.15rem;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.role-header span {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 .resume-list {
   list-style: none;
   display: grid;
