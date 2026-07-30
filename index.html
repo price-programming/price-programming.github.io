@@ -113,5 +113,29 @@
 
 </section>
 
+<div class="chat-widget" id="chatWidget">
+  <button class="chat-toggle" id="chatToggle" type="button" aria-expanded="false">
+    <span>Ask Brandon</span>
+    <span class="chat-pill">AI</span>
+  </button>
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <h3>Ask Brandon</h3>
+      <p>Ask about my experience, projects, skills, or résumé.</p>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-suggestions">
+      <button type="button" class="suggestion-chip" data-question="What projects have you worked on?">Projects</button>
+      <button type="button" class="suggestion-chip" data-question="What skills do you have?">Skills</button>
+      <button type="button" class="suggestion-chip" data-question="Where have you worked?">Experience</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" type="text" placeholder="Ask a question..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
